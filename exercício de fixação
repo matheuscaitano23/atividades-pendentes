@@ -1,0 +1,79 @@
+1. DOM básico
+
+O DOM é a representação da página HTML feita pelo navegador. Ele permite que o JavaScript encontre e modifique elementos da página, como textos, imagens e botões.
+
+2. Seleção de elementos com querySelector
+
+O querySelector() serve para selecionar um elemento da página usando seu seletor, como id, classe ou tag. Depois de selecionar, podemos alterar seu conteúdo, estilo ou outras características.
+
+3. Diferença entre HTML e DOM
+
+O HTML é o código escrito pelo programador no arquivo. O DOM é a estrutura que o navegador cria a partir desse HTML e que pode ser modificada pelo JavaScript.
+
+4. Alterando estilos com JavaScript
+
+O JavaScript pode alterar a aparência de elementos HTML, como cor, tamanho, largura e fundo. Isso pode ser feito selecionando o elemento e modificando suas propriedades de estilo.
+
+5. Entrada de dados com input
+
+O elemento input permite que o usuário digite informações na página. O JavaScript pode pegar esse dado e utilizá-lo para mostrar uma mensagem ou realizar alguma ação.
+
+6. Capturando valor com .value
+
+A propriedade .value serve para pegar o conteúdo que o usuário digitou em um input. Assim, o JavaScript consegue utilizar esse valor em outras operações.
+
+7. Função simples em JavaScript
+
+Uma função é um bloco de código criado para realizar uma determinada tarefa. Ela ajuda a organizar o programa e evita repetir o mesmo código várias vezes.
+
+8. Função com parâmetro
+
+Parâmetros são valores que uma função recebe para poder trabalhar com informações diferentes. Assim, uma mesma função pode produzir resultados diferentes dependendo do valor recebido.
+
+9. Função com retorno
+
+Uma função que apenas executa uma ação realiza uma tarefa, mas não devolve um resultado. Já uma função com return pode calcular ou produzir um valor para ser utilizado em outra parte do programa.
+
+10. Soma de valores usando inputs
+
+Os valores de input normalmente são recebidos como texto. Por isso, quando queremos fazer cálculos, precisamos convertê-los para números antes de realizar a soma.
+
+11. Validação de campo vazio
+
+É importante verificar se um campo está vazio para evitar que o programa processe informações incompletas. Dessa forma, podemos avisar o usuário para preencher o campo corretamente.
+
+12. Uso de if com input
+
+O if permite verificar uma condição usando os dados digitados pelo usuário. Por exemplo, podemos verificar a idade e informar se a pessoa é maior ou menor de idade.
+
+13. Alterando imagem com JavaScript
+
+O JavaScript pode alterar atributos dos elementos HTML. No caso de uma imagem, podemos modificar o atributo src para trocar a imagem exibida na página.
+
+14. Criando interação com botão
+
+Um botão pode possuir um evento de clique. Quando o usuário clica nele, uma função pode ser executada para realizar alguma ação, como mudar o texto de um título.
+
+15. Calculadora simples
+
+Inputs servem para receber os números, as funções realizam os cálculos e o DOM permite mostrar o resultado na página. Juntos, eles podem formar uma calculadora simples.
+
+16. Conversor de texto
+
+O JavaScript pode pegar o texto digitado em um input e modificá-lo. Por exemplo, podemos transformar todas as letras do texto em letras maiúsculas.
+
+17. Contador de caracteres
+
+A propriedade .length informa a quantidade de caracteres de um texto. Ela pode ser usada para contar quantas letras existem em uma palavra ou frase digitada pelo usuário.
+
+18. Manipulando classes com JavaScript
+
+O JavaScript pode adicionar ou remover classes CSS de um elemento. Com isso, podemos mudar sua aparência, como cor, tamanho ou fundo, quando alguma ação acontecer.
+
+19. Cadastro simples com inputs
+
+Vários inputs podem receber diferentes informações, como nome, idade e curso. O JavaScript pode juntar esses dados e mostrar tudo organizado em uma área de resultado.
+
+20. Mini sistema interativo
+
+O DOM permite acessar e modificar os elementos da página, o querySelector() seleciona esses elementos, as funções realizam as tarefas e os inputs recebem os dados. Assim, podemos calcular o valor total de uma compra usando preço e quantidade.
