@@ -1,1 +1,18 @@
+# Meu Primeiro Deploy
 
+Este repositório foi criado para a atividade prática de Git e GitHub.
+
+## Etapas realizadas
+
+- Criei a pasta `meu-primeiro-deploy`.
+- Criei o arquivo `index.html`.
+- Inicializei um repositório Git (`git init`).
+- Adicionei os arquivos (`git add .`).
+- Fiz o primeiro commit (`git commit -m "Deploy inicial"`).
+- Criei um repositório no GitHub.
+- Conectei o repositório local ao remoto.
+- Enviei os arquivos para o GitHub (`git push -u origin main`).
+
+## Arquivos
+
+- `index.html` – página inicial com a mensagem **Olá, GitHub!**
