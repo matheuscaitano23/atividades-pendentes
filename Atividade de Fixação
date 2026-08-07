@@ -1,0 +1,74 @@
+# 1 - Soma de dois números
+a = float(input("Primeiro número: "))
+b = float(input("Segundo número: "))
+print(a + b)
+
+# 2 - Média de três notas
+n1 = float(input("Nota 1: "))
+n2 = float(input("Nota 2: "))
+n3 = float(input("Nota 3: "))
+print((n1 + n2 + n3) / 3)
+
+# 3 - Área do círculo
+raio = float(input("Raio: "))
+print(3.14 * raio * raio)
+
+# 4 - Celsius para Fahrenheit
+c = float(input("Celsius: "))
+print((c * 9 / 5) + 32)
+
+# 5 - Tabuada
+num = int(input("Número: "))
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+
+# 6 - Par ou ímpar
+num = int(input("Número: "))
+if num % 2 == 0:
+    print("Par")
+else:
+    print("Ímpar")
+
+# 7 - Fatorial
+num = int(input("Número: "))
+fat = 1
+for i in range(1, num + 1):
+    fat = fat * i
+print(fat)
+
+# 8 - Fibonacci
+n = int(input("Quantidade: "))
+a = 0
+b = 1
+for i in range(n):
+    print(a)
+    c = a + b
+    a = b
+    b = c
+
+# 9 - Calculadora
+a = float(input("Primeiro número: "))
+b = float(input("Segundo número: "))
+op = input("Operação (+ - * /): ")
+
+if op == "+":
+    print(a + b)
+elif op == "-":
+    print(a - b)
+elif op == "*":
+    print(a * b)
+elif op == "/":
+    print(a / b)
+
+# 10 - Número primo
+num = int(input("Número: "))
+primo = True
+
+for i in range(2, num):
+    if num % i == 0:
+        primo = False
+
+if primo and num > 1:
+    print("É primo")
+else:
+    print("Não é primo")
