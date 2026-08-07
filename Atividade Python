@@ -1,0 +1,296 @@
+# Questão 1
+
+arroz = float(input("Preço do arroz: R$ "))
+feijao = float(input("Preço do feijão: R$ "))
+carne = float(input("Preço da carne (kg): R$ "))
+macarrao = float(input("Preço do macarrão: R$ "))
+
+if arroz > 9:
+    print("Arroz acima da média nacional.")
+else:
+    print("Arroz abaixo ou igual à média nacional.")
+
+if feijao > 12:
+    print("Feijão acima da média nacional.")
+else:
+    print("Feijão abaixo ou igual à média nacional.")
+
+if carne > 30:
+    print("Carne acima da média nacional.")
+else:
+    print("Carne abaixo ou igual à média nacional.")
+
+if macarrao > 5:
+    print("Macarrão acima da média nacional.")
+else:
+    print("Macarrão abaixo ou igual à média nacional.")
+
+print()
+
+
+# Questão 2
+
+numero = int(input("Digite um número inteiro: "))
+
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+if numero > 0:
+    print("O número é positivo.")
+elif numero < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+
+print()
+
+
+# Questão 3
+
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+nota3 = float(input("Digite a terceira nota: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+print("Média:", media)
+
+if media == 10:
+    print("Aluno aprovado com louvor.")
+elif media >= 7:
+    print("Aluno aprovado.")
+else:
+    print("Aluno reprovado.")
+
+print()
+
+
+# Questão 4
+
+fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
+
+celsius = (5 * (fahrenheit - 32)) / 9
+
+print("Temperatura em Fahrenheit:", fahrenheit)
+print("Temperatura em Celsius:", celsius)
+
+print()
+
+
+# Questão 5
+
+votantes = int(input("Digite o número de votantes: "))
+
+candidato1 = 0
+candidato2 = 0
+candidato3 = 0
+
+for i in range(votantes):
+    voto = int(input("Digite o voto (1, 2 ou 3): "))
+
+    if voto == 1:
+        candidato1 += 1
+    elif voto == 2:
+        candidato2 += 1
+    elif voto == 3:
+        candidato3 += 1
+    else:
+        print("Voto inválido.")
+
+print("Votos do candidato 1:", candidato1)
+print("Votos do candidato 2:", candidato2)
+print("Votos do candidato 3:", candidato3)
+
+print()
+
+
+# Questão 6
+
+maior = 0
+menor = 999
+soma_mulheres = 0
+quantidade_mulheres = 0
+homens = 0
+
+for i in range(50):
+    altura = float(input("Digite a altura: "))
+    sexo = input("Digite o sexo (M/F): ")
+
+    if altura > maior:
+        maior = altura
+
+    if altura < menor:
+        menor = altura
+
+    if sexo == "F" or sexo == "f":
+        soma_mulheres += altura
+        quantidade_mulheres += 1
+    elif sexo == "M" or sexo == "m":
+        homens += 1
+
+if quantidade_mulheres > 0:
+    media_mulheres = soma_mulheres / quantidade_mulheres
+else:
+    media_mulheres = 0
+
+mulheres = 50 - homens
+
+print("Maior altura:", maior)
+print("Menor altura:", menor)
+print("Média de altura das mulheres:", media_mulheres)
+print("Total de homens:", homens)
+print("Porcentagem de homens:", (homens / 50) * 100, "%")
+print("Porcentagem de mulheres:", (mulheres / 50) * 100, "%")
+
+print()
+
+
+# Questão 7
+
+vendas = float(input("Digite o valor das vendas: R$ "))
+
+lucro = vendas * 0.23
+
+print("Lucro anual da empresa: R$", lucro)
+
+print()
+
+
+# Questão 8
+
+numero = int(input("Digite um número inteiro: "))
+
+primo = True
+
+if numero < 2:
+    primo = False
+else:
+    for i in range(2, numero):
+        if numero % i == 0:
+            primo = False
+            break
+
+if primo:
+    print("O número é primo.")
+else:
+    print("O número não é primo.")
+
+
+# Questão 9
+
+numero = int(input("Digite um número inteiro: "))
+
+fatorial = 1
+
+for i in range(1, numero + 1):
+    fatorial = fatorial * i
+
+print("O fatorial de", numero, "é", fatorial)
+
+print()
+
+
+# Questão 10
+
+valor = float(input("Digite o valor do produto: R$ "))
+desconto = float(input("Digite a porcentagem de desconto: "))
+
+valor_final = valor - (valor * desconto / 100)
+
+print("Preço final do produto: R$", valor_final)
+
+print()
+
+
+# Questão 11
+
+horas = float(input("Digite a quantidade de horas: "))
+
+minutos = horas * 60
+segundos = horas * 3600
+
+print("Minutos:", minutos)
+print("Segundos:", segundos)
+
+print()
+
+
+# Questão 12
+
+nota1 = float(input("Digite a primeira nota: "))
+peso1 = float(input("Digite o peso da primeira nota: "))
+
+nota2 = float(input("Digite a segunda nota: "))
+peso2 = float(input("Digite o peso da segunda nota: "))
+
+nota3 = float(input("Digite a terceira nota: "))
+peso3 = float(input("Digite o peso da terceira nota: "))
+
+media = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3)
+
+print("Média ponderada:", media)
+
+print()
+
+
+# Questão 13
+
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+
+if n1 > n2:
+    n1, n2 = n2, n1
+
+if n1 > n3:
+    n1, n3 = n3, n1
+
+if n2 > n3:
+    n2, n3 = n3, n2
+
+print("Ordem crescente:")
+print(n1)
+print(n2)
+print(n3)
+
+print()
+
+
+# Questão 14
+
+import math
+
+print("Escolha uma figura:")
+print("1 - Quadrado")
+print("2 - Retângulo")
+print("3 - Círculo")
+print("4 - Triângulo")
+
+opcao = int(input("Digite a opção: "))
+
+if opcao == 1:
+    lado = float(input("Digite o lado: "))
+    area = lado * lado
+    print("Área do quadrado:", area)
+
+elif opcao == 2:
+    base = float(input("Digite a base: "))
+    altura = float(input("Digite a altura: "))
+    area = base * altura
+    print("Área do retângulo:", area)
+
+elif opcao == 3:
+    raio = float(input("Digite o raio: "))
+    area = math.pi * (raio * raio)
+    print("Área do círculo:", area)
+
+elif opcao == 4:
+    base = float(input("Digite a base: "))
+    altura = float(input("Digite a altura: "))
+    area = (base * altura) / 2
+    print("Área do triângulo:", area)
+
+else:
+    print("Opção inválida.")
