@@ -1,0 +1,245 @@
+Atividade – Formação Profissional
+Professor: Ítalo 
+Turma: 2 A
+
+## 1. Nome e idade
+
+```javascript
+let nome = prompt("Digite seu nome:");
+let idade = Number(prompt("Digite sua idade:"));
+
+console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+```
+
+## 2. Soma de dois números
+
+```javascript
+let numero1 = Number(prompt("Digite um número:"));
+let numero2 = Number(prompt("Digite outro número:"));
+
+let soma = numero1 + numero2;
+
+console.log("Resultado: " + soma);
+```
+
+## 3. Quatro operações
+
+```javascript
+let numero1 = Number(prompt("Digite um número:"));
+let numero2 = Number(prompt("Digite outro número:"));
+
+console.log("Soma: " + (numero1 + numero2));
+console.log("Subtração: " + (numero1 - numero2));
+console.log("Multiplicação: " + (numero1 * numero2));
+console.log("Divisão: " + (numero1 / numero2));
+```
+
+## 4. Antecessor e sucessor
+
+```javascript
+let numero = Number(prompt("Digite um número:"));
+
+console.log("Antecessor: " + (numero - 1));
+console.log("Sucessor: " + (numero + 1));
+```
+
+## 5. Maior ou menor de idade
+
+```javascript
+let idade = Number(prompt("Digite sua idade:"));
+
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
+```
+
+## 6. Situação do aluno
+
+```javascript
+let nota = Number(prompt("Digite a nota:"));
+
+if (nota >= 7) {
+    console.log("Aprovado");
+} else if (nota >= 5) {
+    console.log("Recuperação");
+} else {
+    console.log("Reprovado");
+}
+```
+
+## 7. Par ou ímpar
+
+```javascript
+let numero = Number(prompt("Digite um número:"));
+
+if (numero % 2 == 0) {
+    console.log("Par");
+} else {
+    console.log("Ímpar");
+}
+```
+
+## 8. Maior entre dois números
+
+```javascript
+let numero1 = Number(prompt("Digite o primeiro número:"));
+let numero2 = Number(prompt("Digite o segundo número:"));
+
+if (numero1 > numero2) {
+    console.log("O maior número é: " + numero1);
+} else if (numero2 > numero1) {
+    console.log("O maior número é: " + numero2);
+} else {
+    console.log("Os dois números são iguais");
+}
+```
+
+## 9. Positivo, negativo ou zero
+
+```javascript
+let numero = Number(prompt("Digite um número:"));
+
+if (numero > 0) {
+    console.log("Positivo");
+} else if (numero < 0) {
+    console.log("Negativo");
+} else {
+    console.log("Zero");
+}
+```
+
+## 10. Aumento de 10% no salário
+
+```javascript
+let salario = Number(prompt("Digite o salário:"));
+
+let novoSalario = salario + (salario * 0.10);
+
+console.log("Salário antigo: R$ " + salario.toFixed(2));
+console.log("Novo salário: R$ " + novoSalario.toFixed(2));
+```
+
+## 11. Compra de maçãs
+
+```javascript
+let quantidade = Number(prompt("Digite a quantidade de maçãs:"));
+let valor = Number(prompt("Digite o valor de cada maçã:"));
+
+let total = quantidade * valor;
+
+console.log("Valor total: R$ " + total.toFixed(2));
+```
+
+## 12. Celsius para Fahrenheit
+
+```javascript
+let celsius = Number(prompt("Digite a temperatura em Celsius:"));
+
+let fahrenheit = (celsius * 9 / 5) + 32;
+
+console.log("Temperatura em Fahrenheit: " + fahrenheit);
+```
+
+## 13. IMC
+
+```javascript
+let peso = Number(prompt("Digite seu peso:"));
+let altura = Number(prompt("Digite sua altura:"));
+
+let imc = peso / (altura * altura);
+
+console.log("Seu IMC é: " + imc.toFixed(2));
+```
+
+## 14. Tabuada de 1 até 10
+
+```javascript
+let numero = Number(prompt("Digite um número:"));
+
+for (let i = 1; i <= 10; i++) {
+    console.log(numero + " x " + i + " = " + (numero * i));
+}
+```
+
+## 15. Números de 1 até 10
+
+```javascript
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+```
+
+## 16. Números pares de 1 até 20
+
+```javascript
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
+```
+
+## 17. Soma de 5 números
+
+```javascript
+let soma = 0;
+
+for (let i = 1; i <= 5; i++) {
+    let numero = Number(prompt("Digite o número " + i + ":"));
+    soma = soma + numero;
+}
+
+console.log("Soma dos números: " + soma);
+```
+
+## 18. Maior de 5 números
+
+```javascript
+let maior = Number(prompt("Digite o número 1:"));
+
+for (let i = 2; i <= 5; i++) {
+    let numero = Number(prompt("Digite o número " + i + ":"));
+
+    if (numero > maior) {
+        maior = numero;
+    }
+}
+
+console.log("O maior número é: " + maior);
+```
+
+## 19. Nome e turno de estudo
+
+```javascript
+let nome = prompt("Digite seu nome:");
+let turno = prompt("Digite o turno (M, V ou N):");
+
+if (turno == "M") {
+    console.log("Bom dia, " + nome + "!");
+} else if (turno == "V") {
+    console.log("Boa tarde, " + nome + "!");
+} else if (turno == "N") {
+    console.log("Boa noite, " + nome + "!");
+} else {
+    console.log("Turno inválido");
+}
+```
+
+## 20. Desconto de 5%
+
+```javascript
+let valor = Number(prompt("Digite o valor da compra:"));
+
+if (valor > 100) {
+    let desconto = valor * 0.05;
+    let valorFinal = valor - desconto;
+
+    console.log("Desconto: R$ " + desconto.toFixed(2));
+    console.log("Valor final: R$ " + valorFinal.toFixed(2));
+} else {
+    console.log("Sem desconto");
+    console.log("Valor final: R$ " + valor.toFixed(2));
+}
+```
