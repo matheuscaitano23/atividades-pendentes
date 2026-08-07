@@ -1,1 +1,232 @@
 
+
+// 1 - A e B
+
+let A = 10;
+let B = 20;
+
+let resultado = A + B;
+
+alert("Resultado: " + resultado);
+document.write("Resultado: " + resultado + "<br>");
+console.log("Resultado: " + resultado);
+
+
+// 2 - Salário
+
+function calcularSalario(salario) {
+    let gratificacao = salario * 0.05;
+    let total = salario + gratificacao;
+    let imposto = total * 0.07;
+
+    return total - imposto;
+}
+
+let salario = parseFloat(prompt("Digite o salário-base:"));
+let salarioFinal = calcularSalario(salario);
+
+alert("Salário final: R$ " + salarioFinal.toFixed(2));
+document.write("Salário final: R$ " + salarioFinal.toFixed(2) + "<br>");
+console.log("Salário final: R$ " + salarioFinal.toFixed(2));
+
+
+// 3 - Nome e idade
+
+let nome = prompt("Digite seu nome:");
+let idade = parseInt(prompt("Digite sua idade:"));
+
+alert("Nome: " + nome + "\nIdade: " + idade);
+document.write("Nome: " + nome + "<br>");
+document.write("Idade: " + idade + "<br>");
+console.log("Nome: " + nome);
+console.log("Idade: " + idade);
+
+
+// 4 - Operações sem função
+
+let x = parseInt(prompt("Digite o primeiro número:"));
+let y = parseInt(prompt("Digite o segundo número:"));
+
+let soma = x + y;
+let multiplicacao = x * y;
+let divisao = x / y;
+let subtracao = x - y;
+
+alert(
+    "Soma: " + soma +
+    "\nMultiplicação: " + multiplicacao +
+    "\nDivisão: " + divisao +
+    "\nSubtração: " + subtracao
+);
+
+document.write("Soma: " + soma + "<br>");
+document.write("Multiplicação: " + multiplicacao + "<br>");
+document.write("Divisão: " + divisao + "<br>");
+document.write("Subtração: " + subtracao + "<br>");
+
+console.log("Soma: " + soma);
+console.log("Multiplicação: " + multiplicacao);
+console.log("Divisão: " + divisao);
+console.log("Subtração: " + subtracao);
+
+
+// 5 - Operações usando funções
+
+function somar(a, b) {
+    return a + b;
+}
+
+function multiplicar(a, b) {
+    return a * b;
+}
+
+function dividir(a, b) {
+    return a / b;
+}
+
+function subtrair(a, b) {
+    return a - b;
+}
+
+let numero1 = parseInt(prompt("Digite o primeiro número:"));
+let numero2 = parseInt(prompt("Digite o segundo número:"));
+
+let resultadoSoma = somar(numero1, numero2);
+let resultadoMultiplicacao = multiplicar(numero1, numero2);
+let resultadoDivisao = dividir(numero1, numero2);
+let resultadoSubtracao = subtrair(numero1, numero2);
+
+alert(
+    "Soma: " + resultadoSoma +
+    "\nMultiplicação: " + resultadoMultiplicacao +
+    "\nDivisão: " + resultadoDivisao +
+    "\nSubtração: " + resultadoSubtracao
+);
+
+document.write("Soma: " + resultadoSoma + "<br>");
+document.write("Multiplicação: " + resultadoMultiplicacao + "<br>");
+document.write("Divisão: " + resultadoDivisao + "<br>");
+document.write("Subtração: " + resultadoSubtracao + "<br>");
+
+console.log("Soma: " + resultadoSoma);
+console.log("Multiplicação: " + resultadoMultiplicacao);
+console.log("Divisão: " + resultadoDivisao);
+console.log("Subtração: " + resultadoSubtracao);
+
+
+// 6 - Dados pessoais
+
+let nomeCompleto = prompt("Digite seu nome:");
+let endereco = prompt("Digite seu endereço, cidade, estado e CEP:");
+let telefone = prompt("Digite seu telefone:");
+let area = prompt("Digite sua área de atuação profissional:");
+
+alert(
+    "Nome: " + nomeCompleto +
+    "\nEndereço: " + endereco +
+    "\nTelefone: " + telefone +
+    "\nÁrea de atuação: " + area
+);
+
+document.write("Nome: " + nomeCompleto + "<br>");
+document.write("Endereço: " + endereco + "<br>");
+document.write("Telefone: " + telefone + "<br>");
+document.write("Área de atuação: " + area + "<br>");
+
+console.log("Nome: " + nomeCompleto);
+console.log("Endereço: " + endereco);
+console.log("Telefone: " + telefone);
+console.log("Área de atuação: " + area);
+
+
+// 7 - Lucro da empresa
+
+let vendas = parseFloat(prompt("Digite o valor total das vendas:"));
+
+let lucro = vendas * 0.23;
+
+alert("Lucro anual: R$ " + lucro.toFixed(2));
+document.write("Lucro anual: R$ " + lucro.toFixed(2) + "<br>");
+console.log("Lucro anual: R$ " + lucro.toFixed(2));
+
+
+// 8 - Maior número
+
+let maior = parseFloat(prompt("Digite o 1º número:"));
+
+for (let i = 2; i <= 5; i++) {
+    let numero = parseFloat(prompt("Digite o " + i + "º número:"));
+
+    if (numero > maior) {
+        maior = numero;
+    }
+}
+
+alert("O maior número é: " + maior);
+document.write("O maior número é: " + maior + "<br>");
+console.log("O maior número é: " + maior);
+
+
+// 9 - Maiores e menores de idade
+
+let maiores = 0;
+let menores = 0;
+let idadePessoa;
+
+do {
+    idadePessoa = parseInt(prompt("Digite uma idade (0 para parar):"));
+
+    if (idadePessoa >= 18) {
+        maiores++;
+    } else if (idadePessoa > 0) {
+        menores++;
+    }
+
+} while (idadePessoa != 0);
+
+alert(
+    "Maiores de idade: " + maiores +
+    "\nMenores de idade: " + menores
+);
+
+document.write("Maiores de idade: " + maiores + "<br>");
+document.write("Menores de idade: " + menores + "<br>");
+
+console.log("Maiores de idade: " + maiores);
+console.log("Menores de idade: " + menores);
+
+
+// 10 - IMC
+
+function calcularIMC(peso, altura) {
+    return peso / (altura * altura);
+}
+
+let nomePessoa = prompt("Digite seu nome:");
+let idadePessoa2 = parseInt(prompt("Digite sua idade:"));
+let peso = parseFloat(prompt("Digite seu peso em kg:"));
+let altura = parseFloat(prompt("Digite sua altura em metros:"));
+
+let imc = calcularIMC(peso, altura);
+
+alert(
+    "Nome: " + nomePessoa +
+    "\nIdade: " + idadePessoa2 +
+    "\nPeso: " + peso + " kg" +
+    "\nAltura: " + altura + " m" +
+    "\nIMC: " + imc.toFixed(2)
+);
+
+document.write("Nome: " + nomePessoa + "<br>");
+document.write("Idade: " + idadePessoa2 + "<br>");
+document.write("Peso: " + peso + " kg<br>");
+document.write("Altura: " + altura + " m<br>");
+document.write("IMC: " + imc.toFixed(2) + "<br>");
+
+console.log("Nome: " + nomePessoa);
+console.log("Idade: " + idadePessoa2);
+console.log("Peso: " + peso);
+console.log("Altura: " + altura);
+console.log("IMC: " + imc.toFixed(2));
+```
+
