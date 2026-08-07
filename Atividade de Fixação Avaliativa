@@ -1,0 +1,126 @@
+# 1
+produtos = [
+    {"nome": "Arroz", "preco": 20, "qtd": 10},
+    {"nome": "Feijão", "preco": 8, "qtd": 3},
+    {"nome": "Macarrão", "preco": 5, "qtd": 2}
+]
+
+total = 0
+caro = produtos[0]
+
+for p in produtos:
+    total += p["preco"] * p["qtd"]
+    if p["preco"] > caro["preco"]:
+        caro = p
+
+print("Total do estoque:", total)
+print("Produto mais caro:", caro["nome"])
+
+print("Quantidade menor que 5:")
+for p in produtos:
+    if p["qtd"] < 5:
+        print(p["nome"])
+
+
+# 2
+alunos = {}
+
+qtd = int(input("Quantidade de alunos: "))
+
+for i in range(qtd):
+    nome = input("Nome: ")
+    n1 = float(input("Nota 1: "))
+    n2 = float(input("Nota 2: "))
+    media = (n1 + n2) / 2
+    alunos[nome] = media
+
+for nome in alunos:
+    print(nome, "-", alunos[nome])
+    if alunos[nome] >= 7:
+        print("Aprovado")
+    else:
+        print("Reprovado")
+
+
+# 3
+def contar(lista):
+    pares = 0
+    impares = 0
+    positivos = 0
+    negativos = 0
+
+    for n in lista:
+        if type(n) != int:
+            print("Entrada inválida")
+            continue
+
+        if n % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+
+        if n >= 0:
+            positivos += 1
+        else:
+            negativos += 1
+
+    print("Pares:", pares)
+    print("Ímpares:", impares)
+    print("Positivos:", positivos)
+    print("Negativos:", negativos)
+
+contar([1, 2, -3, 4, -5, 6])
+
+
+# 4
+class ContaBancaria:
+    def __init__(self, titular, conta, saldo):
+        self.titular = titular
+        self.conta = conta
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+
+    def sacar(self, valor):
+        if valor <= self.saldo:
+            self.saldo -= valor
+        else:
+            print("Saldo insuficiente")
+
+    def consultar(self):
+        print("Saldo:", self.saldo)
+
+c = ContaBancaria("João", "123", 500)
+c.depositar(100)
+c.sacar(200)
+c.consultar()
+
+
+# 5
+class Funcionario:
+    def __init__(self, nome):
+        self.nome = nome
+
+class FuncionarioHorista(Funcionario):
+    def __init__(self, nome, horas, valor):
+        super().__init__(nome)
+        self.horas = horas
+        self.valor = valor
+
+    def salario(self):
+        print(self.nome, self.horas * self.valor)
+
+class FuncionarioMensalista(Funcionario):
+    def __init__(self, nome, salario):
+        super().__init__(nome)
+        self.salario_mensal = salario
+
+    def salario(self):
+        print(self.nome, self.salario_mensal)
+
+f1 = FuncionarioHorista("Carlos", 160, 20)
+f2 = FuncionarioMensalista("Maria", 3000)
+
+f1.salario()
+f2.salario()
