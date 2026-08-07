@@ -1,0 +1,150 @@
+// 1
+
+let A = 10;
+let B = 20;
+
+alert(A + " " + B);
+document.write(A + " " + B + "<br>");
+console.log(A, B);
+
+
+// 2
+
+function salario(s) {
+    return (s + s * 0.05) * 0.93;
+}
+
+let s = Number(prompt("Digite o salário:"));
+let resultado = salario(s);
+
+alert(resultado);
+document.write(resultado + "<br>");
+console.log(resultado);
+
+
+// 3
+
+let nome = prompt("Digite seu nome:");
+let idade = prompt("Digite sua idade:");
+
+alert("Meu nome é " + nome + " e tenho " + idade + " anos.");
+document.write("Meu nome é " + nome + " e tenho " + idade + " anos.<br>");
+console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+
+
+// 4
+
+let x = Number(prompt("Digite um número:"));
+let y = Number(prompt("Digite outro número:"));
+
+let resposta = "Soma: " + (x + y) +
+"<br>Multiplicação: " + (x * y) +
+"<br>Divisão: " + (x / y) +
+"<br>Subtração: " + (x - y);
+
+alert("Soma: " + (x + y));
+document.write(resposta);
+console.log("Soma:", x + y);
+console.log("Multiplicação:", x * y);
+console.log("Divisão:", x / y);
+console.log("Subtração:", x - y);
+
+
+// 5
+
+function contas(x, y) {
+    return [x + y, x * y, x / y, x - y];
+}
+
+let a = Number(prompt("Digite um número:"));
+let b = Number(prompt("Digite outro número:"));
+let r = contas(a, b);
+
+alert(r);
+document.write(r + "<br>");
+console.log(r);
+
+
+// 6
+
+let n = prompt("Nome:");
+let e = prompt("Endereço:");
+let c = prompt("Cidade:");
+let est = prompt("Estado:");
+let cep = prompt("CEP:");
+let tel = prompt("Telefone:");
+let prof = prompt("Área profissional:");
+
+let dados = n + "<br>" + e + ", " + c + " - " + est +
+"<br>" + cep + "<br>" + tel + "<br>" + prof;
+
+alert(n + "\n" + e + "\n" + c + " - " + est + "\n" + cep + "\n" + tel + "\n" + prof);
+document.write(dados);
+console.log(n, e, c, est, cep, tel, prof);
+
+
+// 7
+
+let vendas = Number(prompt("Digite o total de vendas:"));
+let lucro = vendas * 0.23;
+
+alert(lucro);
+document.write(lucro + "<br>");
+console.log(lucro);
+
+
+// 8
+
+let maior = Number(prompt("Digite um número:"));
+
+for (let i = 2; i <= 5; i++) {
+    let num = Number(prompt("Digite outro número:"));
+
+    if (num > maior) {
+        maior = num;
+    }
+}
+
+alert("Maior: " + maior);
+document.write("Maior: " + maior + "<br>");
+console.log("Maior:", maior);
+
+
+// 9
+
+let maior18 = 0;
+let menor18 = 0;
+let idade2;
+
+do {
+    idade2 = Number(prompt("Digite uma idade (0 para parar):"));
+
+    if (idade2 >= 18) {
+        maior18++;
+    } else if (idade2 > 0) {
+        menor18++;
+    }
+
+} while (idade2 != 0);
+
+alert("Maiores: " + maior18 + "\nMenores: " + menor18);
+document.write("Maiores: " + maior18 + "<br>Menores: " + menor18);
+console.log("Maiores:", maior18, "Menores:", menor18);
+
+
+// 10
+
+function imc(p, a) {
+    return p / (a * a);
+}
+
+let nome2 = prompt("Nome:");
+let idade3 = prompt("Idade:");
+let peso = Number(prompt("Peso:"));
+let altura = Number(prompt("Altura:"));
+
+let resultadoIMC = imc(peso, altura);
+
+alert(nome2 + " - " + idade3 + " anos - IMC: " + resultadoIMC.toFixed(2));
+document.write(nome2 + " - " + idade3 + " anos - IMC: " + resultadoIMC.toFixed(2));
+console.log(nome2, idade3, resultadoIMC.toFixed(2));
